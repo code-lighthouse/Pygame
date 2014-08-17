@@ -1,18 +1,19 @@
 #! /usr/bin/python
 
+
 from tank import Tank
 
-tanks = { "a":Tank("Alice"), "b":Tank("Bob"), "c":Tank("Carol") }
+tanks = {"a": Tank("Alice"), "b": Tank("Bob"), "c": Tank("Carol")}
 alive_tanks = len(tanks)
 
 while alive_tanks > 1:
 
     print
-    for tank_name in sorted( tanks.keys() ):
+    for tank_name in sorted(tanks.keys()):
         print tank_name, tanks[tank_name]
 
     first = raw_input("Who fires? ").lower()
-    second = raw_input("Who at? " ).lower()
+    second = raw_input("Who at? ").lower()
 
     try:
         first_tank = tanks[first]
